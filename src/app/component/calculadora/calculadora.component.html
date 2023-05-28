@@ -1,0 +1,38 @@
+<main class="container h-100">
+  <section class="d-flex flex-column text-center h-100">
+    <div class="border border-5">
+      <div class="text-end form-control text-lg-right" type = "text">{{ input }}</div>
+    </div>
+    <div class="border border-5">
+      <div class="text-end form-control text-lg-right" type="text">{{result}}</div>
+    </div>
+    <div class="d-flex flex-column  border border-3">
+      <div class="d-flex justify-content-between">
+        <button class="w-25 btn btn-outline-primary" type="button" (click)="pressNum('0')">0</button>
+        <button class="w-25 btn btn-outline-primary" type="button"(click)="pressNum('1')">1</button>
+        <button class="w-25 btn btn-outline-primary" type="button"(click)="pressNum('2')">2</button>
+        <button class="w-25 btn btn-outline-primary" type="button"(click)="pressNum('3')">3</button>
+        <button class="w-25 btn btn-outline-primary" type="button"(click)="pressNum('4')">4</button>
+      </div >
+      <div class="d-flex justify-content-between">
+        <button class="w-25 btn btn-outline-primary" type="button" (click)="pressNum('5')">5</button>
+        <button class="w-25 btn btn-outline-primary" type="button" (click)="pressNum('6')">6</button>
+        <button class="w-25 btn btn-outline-primary" type="button" (click)="pressNum('7')">7</button>
+        <button class="w-25 btn btn-outline-primary" type="button" (click)="pressNum('8')">8</button>
+        <button class="w-25 btn btn-outline-primary" type="button" (click)="pressNum('9')">9</button>
+      </div>
+      <div class="d-flex justify-content-between">
+        <button class="w-25 btn btn-outline-secondary" type="button" (click)="pressOperator('-')">-</button>
+        <button class="w-25 btn btn-outline-secondary" type="button" (click)="pressOperator('+')">+</button>
+        <button class="w-25 btn btn-outline-secondary" type="button" (click)="pressOperator('*')">*</button>
+        <button class="w-25 btn btn-outline-secondary" type="button" (click)="pressOperator('/')">/</button>
+        <button class="w-25 btn btn-outline-secondary" type="button" (click)="pressNum('.')">.</button>
+      </div>
+      <div class="d-flex justify-content-between">
+        <button class="w-50  btn btn-outline-danger"(click)="getLastOperand()">=</button>
+        <button class="w-25  btn btn-outline-dark" type="button" (click)="clear()">reset</button>
+        <button class="w-25  btn btn-outline-dark" type="button" (click)="allClear()">clear</button>
+      </div>
+    </div>
+  </section>
+</main>
